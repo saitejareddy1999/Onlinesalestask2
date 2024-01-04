@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post" action="{% url 'evaluate_expressions' %}">
+    {% csrf_token %}
+    <textarea name="expressions[]" rows="5" cols="40" placeholder="Enter expressions, one per line"></textarea>
+    <br>
+    <input type="submit" value="Evaluate">
+</form>
+</body>
+</html>
